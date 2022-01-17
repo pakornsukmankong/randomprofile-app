@@ -6,6 +6,7 @@ const setProfile = (profile) => {
     const addressElement = document.getElementById('profile-address')
     const companyNameElement = document.getElementById('profile-company-name')
     const companyBsElement = document.getElementById('profile-company-bs')
+    const generateButton = document.getElementById('generate-button')
 
     idElement.innerHTML = profile.id
     nameElement.innerHTML = profile.name
@@ -14,6 +15,7 @@ const setProfile = (profile) => {
     companyNameElement.innerHTML = profile.company.name
     companyBsElement.innerHTML = profile.company.bs
     avatarElement.src = `https://avatars.dicebear.com/api/bottts/${profile.name}${profile.id}.svg`
+    generateButton.addEventListener('click',run)
 
 }
 
@@ -30,3 +32,4 @@ const run = async () => {
 }
 
 run()
+
